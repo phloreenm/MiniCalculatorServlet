@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class first
  */
-@WebServlet("/first")
-public class first extends HttpServlet {
+@WebServlet("/index")
+public class HomeRedirect extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public first() {
+    public HomeRedirect() {
         // TODO Auto-generated constructor stub
     }
 
@@ -26,7 +26,8 @@ public class first extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("index.html");
 	}
 
 	/**

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Calculator Servlet</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-Two number calculator
-<form action="add">
-	Enter 1st number:
-	<input type="text" name="num1"><br>
-	Enter 2nd number:
-	<input type="text" name="num2"><br>
-	<input type="submit">
-</form>
-
-
+	<div class="center-div"><h1>Two number calculator</h1></div>
+	<div class="center-div">
+		<form action="add" method="post">
+			Enter 1st number: <input type="text" name="num1"><br>
+			Enter 2nd number: <input type="text" name="num2"><br>
+			<input class="center-btn" type="submit">
+		</form>
+	</div>
+<script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -29,11 +29,14 @@ public class AddServlet extends HttpServlet {
 			out.println("<meta charset=\"UTF-8\">");
 			out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
 			out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
-			out.println("<title>Document</title>");
+			out.println("<title>Results</title>");
+			out.println("<link rel=\"stylesheet\" href=\"style.css\">");
 			out.println("</head>");
 			out.println("<body>");
-			out.println("<div>Result of summing " + i + " and " + j + " equals: " + k + "</div");
-			out.println("<div><button onclick=\"window.location.href='index.html';\">Back to HomePage</button></div>");
+			out.println("<div class=\"center-div\">Result of " + i + " + " + j + " = " + k + "</div");
+			out.println("<div class=\"center-div\"><button class=\"center-btn\" onclick=\"window.location.href='index.html';\">Return to HomePage</button></div>");
+			out.println("<script src=\"https://code.jquery.com/jquery-3.6.3.slim.js\" integrity=\"sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=\" crossorigin=\"anonymous\"></script>");
+			out.println("<script src=\"script.js\"></script>");
 			out.println("</body>");
 			out.println("</html>");
 		} catch (NumberFormatException e) {
@@ -45,12 +48,19 @@ public class AddServlet extends HttpServlet {
 			out.println("<meta charset=\"UTF-8\">");
 			out.println("<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">");
 			out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
-			out.println("<title>Document</title>");
+			out.println("<title>Error!</title>");
+			out.println("<link rel=\"stylesheet\" href=\"style.css\">");
 			out.println("</head>");
 			out.println("<body>");
-			out.println("PLEASE INSERT AN INTEGER!");
-			out.println("You've got an e.printStackTrace() ERROR!");
-			out.println("<div><button onclick=\"window.location.href='index.html';\">Return to HomePage</button></div>");
+			out.println("<div class=\"center-div\"><h2>PLEASE INSERT AN INTEGER!</div><h2>");
+			out.println("<div class=\"center-div\"><h4>You've got an e.printStackTrace() ERROR!</div><h2>");
+			out.println("<div class=\"center-div\"><button  class=\"center-btn\" onclick=\"window.location.href='index.html';\">Return to HomePage</button></div>");
+			out.println("<script src=\"https://code.jquery.com/jquery-3.6.3.slim.js\" integrity=\"sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=\" crossorigin=\"anonymous\"></script>");
+			out.println("<script src=\"script.js\"></script>");
+			out.println("<script $( document ).ready(function() {\r\n"
+					+ "    console.log(\"Script under WEB-INF loaded!\");\r\n"
+					+ "    // alert(\"Alert under WEB-INF loaded!\");\r\n"
+					+ "});></script>");
 			out.println("</body>");
 			out.println("</html>");
 		}
